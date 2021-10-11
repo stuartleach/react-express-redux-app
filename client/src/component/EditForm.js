@@ -11,8 +11,6 @@ import {
 } from '@chakra-ui/react'
 import { createRef, useEffect, useMemo, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Autocomplete, Option } from 'chakra-ui-simple-autocomplete'
-
 export default function EditForm(props) {
 	const dispatch = useDispatch()
 	const state = useSelector((state) => state.editForm)
