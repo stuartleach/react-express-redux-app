@@ -7,6 +7,7 @@ import {
 	Input,
 	Center,
 	Text,
+	Textarea,
 } from '@chakra-ui/react'
 import { createRef, useEffect, useMemo, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
@@ -35,7 +36,7 @@ export default function EditForm(props) {
 						<Text>id: {results[currentId].id}</Text>
 					</Box>
 					<Box>
-						<Input
+						<Textarea
 							id='title'
 							placeholder={results[currentId].title}
 							ref={titleRef}
@@ -47,14 +48,23 @@ export default function EditForm(props) {
 									clickedId: props.clickedId,
 								})
 							}
+							size='lg'
+							width='30vw'
+							height='10vh'
 						/>
 					</Box>
 					<Box>
-						<Input
+						<Textarea
 							ref={bodyRef}
 							id='body'
 							placeholder={props.results[currentId].body}
-							whiteSpace='breakSpaces'
+							// whiteSpace='breakSpaces'
+							type='text'
+							// resize='vertical'
+
+							width='30vw'
+							height='30vh'
+							variant='filled'
 						/>
 					</Box>
 					<FormErrorMessage>hi</FormErrorMessage>
