@@ -58,10 +58,7 @@ export default function EditForm(props) {
 							ref={bodyRef}
 							id='body'
 							placeholder={props.results[currentId].body}
-							// whiteSpace='breakSpaces'
 							type='text'
-							// resize='vertical'
-
 							width='30vw'
 							height='30vh'
 							variant='filled'

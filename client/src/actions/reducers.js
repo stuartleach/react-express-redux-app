@@ -52,7 +52,7 @@ export const reducer = (state, action) => {
 			}
 		case 'EDIT_BODY':
 			const newResp = state.results.map((r) =>
-				r.id === state.editForm.currentId
+				r.id === state.editForm.currentId + 1
 					? {
 							...r,
 							body: action.body,
@@ -60,7 +60,7 @@ export const reducer = (state, action) => {
 					: r
 			)
 			const allResp = state.allResults.map((r) =>
-				r.id === state.editForm.currentId
+				r.id === state.editForm.currentId + 1
 					? {
 							...r,
 							body: action.body,
@@ -77,7 +77,7 @@ export const reducer = (state, action) => {
 			const newState = {
 				...state,
 				editing: true,
-				clickedId: action.id,
+				clickedId: action.id - 1,
 				editForm: {
 					currentId: action.id - 1,
 				},
